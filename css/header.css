@@ -1,0 +1,52 @@
+.nav-bar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 8vh;
+  border-bottom: 1px solid silver;
+}
+.logo {
+  color: whitesmoke;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-family: 'Baloo Tammudu 2', cursive;
+}
+.nav-links {
+  display: flex;
+  justify-content: space-around;
+  width: 30%;
+  margin: 0; 
+  
+}
+.logo h2 {
+  margin: 8px;
+  padding-top: 10px;
+}
+.nav-links li {
+  list-style: none;
+  position: relative;
+}
+.nav-links a {
+  color: whitesmoke;
+  text-decoration: none;
+  letter-spacing: 2px;
+  font-weight: bold;
+  font-size: 14px;
+  font-family: 'Baloo Tammudu 2', cursive;
+  margin: 0;
+  text-transform: uppercase;
+}
+.nav-links a::before {
+  content: '';
+  display: block;
+  height: 3px;
+  width: 100%;
+  position: absolute;
+  top: 100%;
+  width: 0%;
+  background-color: whitesmoke;
+}
+.nav-links a:hover::before {
+  width: 100%;
+  transition: all ease-in-out 250ms;
+}
