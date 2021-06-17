@@ -1,8 +1,16 @@
 @import url("header.css");
+@import url("random-timer.css");
+@import url("projects.css");
 
+* {
+  box-sizing: border-box;
+}
 body {
   margin: 0;
-  background-color:rgb(1, 1, 17)
+  background-color:rgb(1, 1, 17);
+  height: 100%;
+  width: 100%;
+  font-family:'Baloo Tammudu 2';
 }
 p {
   color: rgb(248, 248, 248);
@@ -10,7 +18,8 @@ p {
 
 .main-content {
   width: 70%;
-  margin: auto;
+  margin-left: auto;
+  margin-right: auto;
   text-decoration: whitesmoke;
 }
 
