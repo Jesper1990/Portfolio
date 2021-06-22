@@ -17,9 +17,10 @@
 }
 h1 {
   text-align: top;
-  margin-bottom: 100px;
+  margin-bottom: 50px;
   font-size: 60px;
   color: whitesmoke;
+  margin-top: 0;
 }
 .big-text {
   font-weight: bold;

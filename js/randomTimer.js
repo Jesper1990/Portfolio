@@ -1,37 +1,17 @@
-const daysEl = document.getElementById('days');
-const hoursEl = document.getElementById('hours');
-const minsEl = document.getElementById('mins');
-const secondsEl = document.getElementById('seconds');
+const startingTime = 10;
+let time = startingTime * 60;
 
-const newYears = "1 Jan 2022";
+const countdownEl = document.getElementById('countdownTen');
 
 function countdown() {
-  const newYearsDate = new Date(newYears);
-  const currentDate = new Date();
+  const minutes = Math.floor(time / 60);
+  let seconds = time % 60;
 
-  const totalSeconds = (newYearsDate - currentDate) / 1000;
+  seconds = seconds < 10 ? '0' + seconds : seconds;
 
-  const days = Math.floor(totalSeconds / 3600 / 24);
-  const hours = Math.floor(totalSeconds / 3600) % 24;
-  const mins = Math.floor(totalSeconds / 60) % 60;
-  const seconds = Math.floor(totalSeconds) % 60;
-
-  console.log(days, hours, mins, seconds);
-
-  daysEl.innerHTML = days;
-  hoursEl.innerHTML = formatTime(hours);
-  minsEl.innerHTML = formatTime(mins);
-  secondsEl.innerHTML = formatTime(seconds);
-
-
-
-}
-
-function formatTime(time) {
-  return time < 10 ? (`0${time}`) : time;
-
+  countdownEl.innerHTML = `${minutes}: ${seconds}`;
+  time--;
 }
 
 countdown();
-
 setInterval(countdown, 1000);
